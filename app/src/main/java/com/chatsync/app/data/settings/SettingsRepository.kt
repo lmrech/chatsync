@@ -8,6 +8,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import javax.inject.Inject
 
 class SettingsRepository @Inject constructor(): SettingsService {
+
     private val _settings: MutableStateFlow<Settings> = MutableStateFlow(Settings())
     override val settings: StateFlow<Settings> = _settings.asStateFlow()
 

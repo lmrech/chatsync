@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ChatSync</string>
+    <string name="create">Create</string>
+    <string name="import_facebook_messenger">Import from Facebook Messenger</string>
 </resources>

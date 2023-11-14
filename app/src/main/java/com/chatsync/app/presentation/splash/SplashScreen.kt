@@ -1,5 +1,6 @@
 package com.chatsync.app.presentation.splash
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -7,6 +8,7 @@ import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Modifier
+import com.chatsync.app.presentation.theme.StyleSheet
 import kotlinx.coroutines.delay
 
 @Composable
@@ -17,13 +19,14 @@ fun SplashScreen(
         Box(
             modifier = Modifier
                 .fillMaxSize()
+                .background(
+                    color = StyleSheet.colorPalette.colorPrimary
+                )
                 .padding(paddingValues)
-        ) {
-
-        }
+        )
 
         LaunchedEffect(Unit) {
-            delay(400L)
+            delay(1000L)
             onDone()
         }
     }

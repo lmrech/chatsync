@@ -3,15 +3,21 @@ package com.chatsync.app.presentation.core
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.imePadding
+import androidx.compose.foundation.layout.systemBarsPadding
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.Modifier
 import androidx.core.view.WindowCompat
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
 import com.chatsync.app.domain.settings.Settings
 import com.chatsync.app.domain.settings.SettingsService
+import com.chatsync.app.presentation.conversation.create.addCreateConversationScreenRoute
 import com.chatsync.app.presentation.home.addHomeScreenRoute
 import com.chatsync.app.presentation.splash.addSplashScreenRoute
 import com.chatsync.app.presentation.splash.onSplashDone
@@ -32,7 +38,7 @@ class LandingActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        WindowCompat.setDecorFitsSystemWindows(window, true)
+        WindowCompat.setDecorFitsSystemWindows(window, false)
 
         setContent {
             val settings by settingsService.settings.collectAsStateWithLifecycle()
@@ -47,7 +53,16 @@ class LandingActivity : ComponentActivity() {
             ChatSyncTheme(
                 darkTheme = settings.isDarkMode,
             ) {
-                NavigationRoutes()
+                Box(
+                    modifier = Modifier
+                        .background(
+                            color = StyleSheet.colorPalette.colorPrimary
+                        )
+                        .imePadding()
+                        .systemBarsPadding()
+                ) {
+                    NavigationRoutes()
+                }
             }
         }
     }
@@ -70,11 +85,12 @@ fun NavigationRoutes() {
         navController = navController,
         startDestination = splashScreenRoute
     ) {
-        addHomeScreenRoute()
         addSplashScreenRoute(
             onDone = {
                 navController.onSplashDone()
             }
         )
+        addHomeScreenRoute(navController = navController)
+        addCreateConversationScreenRoute(navController = navController)
     }
 }

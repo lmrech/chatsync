@@ -8,14 +8,14 @@ sealed class ColorPalette(
     var colorBackground: Color,
 ) {
    data object Light: ColorPalette(
-       colorPrimary = Color.Black,
-       colorSecondary = Color.White,
-       colorBackground = Color.White,
+       colorPrimary = Purple,
+       colorSecondary = White,
+       colorBackground = White,
    )
 
     data object Dark: ColorPalette(
-        colorPrimary = Color.Black,
-        colorSecondary = Color.White,
-        colorBackground = Color.White,
+        colorPrimary = Purple,
+        colorSecondary = White,
+        colorBackground = White,
     )
 }
