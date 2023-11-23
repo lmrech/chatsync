@@ -1,4 +1,4 @@
-package com.chatsync.app.presentation.conversation.create
+package com.chatsync.app.presentation.screen.create
 
 import com.chatsync.app.domain.chat.ChatMessage
 

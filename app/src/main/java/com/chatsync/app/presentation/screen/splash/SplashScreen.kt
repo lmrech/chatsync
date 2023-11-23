@@ -1,4 +1,4 @@
-package com.chatsync.app.presentation.splash
+package com.chatsync.app.presentation.screen.splash
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -20,7 +20,7 @@ fun SplashScreen(
             modifier = Modifier
                 .fillMaxSize()
                 .background(
-                    color = StyleSheet.colorPalette.colorPrimary
+                    color = StyleSheet.colorScheme.colorPrimary
                 )
                 .padding(paddingValues)
         )

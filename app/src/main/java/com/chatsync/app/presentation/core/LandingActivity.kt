@@ -17,13 +17,13 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
 import com.chatsync.app.domain.settings.Settings
 import com.chatsync.app.domain.settings.SettingsService
-import com.chatsync.app.presentation.conversation.create.addCreateConversationScreenRoute
-import com.chatsync.app.presentation.home.addHomeScreenRoute
-import com.chatsync.app.presentation.splash.addSplashScreenRoute
-import com.chatsync.app.presentation.splash.onSplashDone
-import com.chatsync.app.presentation.splash.splashScreenRoute
+import com.chatsync.app.presentation.screen.create.addCreateConversationScreenRoute
+import com.chatsync.app.presentation.screen.home.addHomeScreenRoute
+import com.chatsync.app.presentation.screen.splash.addSplashScreenRoute
+import com.chatsync.app.presentation.screen.splash.onSplashDone
+import com.chatsync.app.presentation.screen.splash.splashScreenRoute
 import com.chatsync.app.presentation.theme.ChatSyncTheme
-import com.chatsync.app.presentation.theme.ColorPalette
+import com.chatsync.app.presentation.theme.ColorScheme
 import com.chatsync.app.presentation.theme.StyleSheet
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
@@ -56,7 +56,7 @@ class LandingActivity : ComponentActivity() {
                 Box(
                     modifier = Modifier
                         .background(
-                            color = StyleSheet.colorPalette.colorPrimary
+                            color = StyleSheet.colorScheme.colorPrimary
                         )
                         .imePadding()
                         .systemBarsPadding()
@@ -69,10 +69,10 @@ class LandingActivity : ComponentActivity() {
 
     private fun setStyleSheet(settings: Settings) {
         if (settings.isDarkMode) {
-            StyleSheet.colorPalette = ColorPalette.Dark
+            StyleSheet.colorScheme = ColorScheme.Dark
 
         } else {
-            StyleSheet.colorPalette = ColorPalette.Light
+            StyleSheet.colorScheme = ColorScheme.Light
         }
     }
 }

@@ -1,4 +1,4 @@
-package com.chatsync.app.presentation.conversation.create
+package com.chatsync.app.presentation.screen.create
 
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -71,14 +71,14 @@ fun CreateConversationUi(
         topBar = {
             TopAppBar(
                 title = { Text(text = stringResource(id = R.string.app_name)) },
-                backgroundColor = StyleSheet.colorPalette.colorPrimary,
-                contentColor = StyleSheet.colorPalette.colorSecondary,
+                backgroundColor = StyleSheet.colorScheme.colorPrimary,
+                contentColor = StyleSheet.colorScheme.colorSecondary,
                 navigationIcon = {
                     IconButton(onClick = onNavigateUp) {
                         Icon(
                             imageVector = Icons.Filled.ArrowBack,
                             contentDescription = "Back",
-                            tint = StyleSheet.colorPalette.colorSecondary
+                            tint = StyleSheet.colorScheme.colorSecondary
                         )
                     }
                 }
@@ -89,7 +89,7 @@ fun CreateConversationUi(
             modifier = Modifier
                 .fillMaxSize()
                 .background(
-                    color = StyleSheet.colorPalette.colorBackground
+                    color = StyleSheet.colorScheme.colorBackground
                 )
                 .padding(paddingValues)
         ) {

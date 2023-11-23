@@ -1,4 +1,4 @@
-package com.chatsync.app.presentation.home
+package com.chatsync.app.presentation.screen.home
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -21,7 +21,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavHostController
 import com.chatsync.app.R
-import com.chatsync.app.presentation.conversation.create.createConversationScreenRoute
+import com.chatsync.app.presentation.screen.create.createConversationScreenRoute
 import com.chatsync.app.presentation.theme.StyleSheet
 
 @Composable
@@ -52,8 +52,8 @@ fun HomeUi(
         topBar = {
             TopAppBar(
                 title = { Text(text = stringResource(id = R.string.app_name)) },
-                backgroundColor = StyleSheet.colorPalette.colorPrimary,
-                contentColor = StyleSheet.colorPalette.colorSecondary
+                backgroundColor = StyleSheet.colorScheme.colorPrimary,
+                contentColor = StyleSheet.colorScheme.colorSecondary
             )
         }
     ) { paddingValues ->
@@ -61,7 +61,7 @@ fun HomeUi(
             modifier = Modifier
                 .fillMaxSize()
                 .background(
-                    color = StyleSheet.colorPalette.colorBackground
+                    color = StyleSheet.colorScheme.colorBackground
                 )
                 .padding(paddingValues)
         ) {
@@ -75,13 +75,13 @@ fun HomeUi(
                         .align(
                             alignment = Alignment.BottomEnd
                         ),
-                    backgroundColor = StyleSheet.colorPalette.colorPrimary,
+                    backgroundColor = StyleSheet.colorScheme.colorPrimary,
                     onClick = onFloatingActionButtonClicked
                 ) {
                     Icon(
                         imageVector = Icons.Filled.Add,
                         contentDescription = "Add",
-                        tint = StyleSheet.colorPalette.colorSecondary
+                        tint = StyleSheet.colorScheme.colorSecondary
                     )
                 }
             }

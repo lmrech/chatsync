@@ -1,9 +1,9 @@
-package com.chatsync.app.presentation.splash
+package com.chatsync.app.presentation.screen.splash
 
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
-import com.chatsync.app.presentation.home.homeScreenRoute
+import com.chatsync.app.presentation.screen.home.homeScreenRoute
 
 const val splashScreenRoute = "splash_screen_route"
 

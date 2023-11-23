@@ -1,4 +1,4 @@
-package com.chatsync.app.presentation.home
+package com.chatsync.app.presentation.screen.home
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

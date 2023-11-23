@@ -1,8 +1,8 @@
-package com.chatsync.app.presentation.conversation.create
+package com.chatsync.app.presentation.screen.create
 
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
-import com.chatsync.app.presentation.home.slideComposable
+import com.chatsync.app.presentation.screen.home.slideComposable
 
 const val createConversationScreenRoute = "create_conversation_screen"
 

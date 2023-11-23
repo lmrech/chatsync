@@ -1,4 +1,4 @@
-package com.chatsync.app.presentation.conversation.create
+package com.chatsync.app.presentation.screen.create
 
 import android.content.ContentResolver
 import android.net.Uri
@@ -21,7 +21,9 @@ class CreateConversationViewModel @Inject constructor(
     private val createConversationUseCase: CreateConversationUseCase
 ) : ViewModel() {
 
-    private val _uiState: MutableStateFlow<CreateConversationUiState> = MutableStateFlow(CreateConversationUiState())
+    private val _uiState: MutableStateFlow<CreateConversationUiState> = MutableStateFlow(
+        CreateConversationUiState()
+    )
     val uiState: StateFlow<CreateConversationUiState> = _uiState.asStateFlow()
 
     fun getFacebookMessengerMessages(uri: Uri) {

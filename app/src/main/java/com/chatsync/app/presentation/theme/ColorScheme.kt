@@ -2,18 +2,18 @@ package com.chatsync.app.presentation.theme
 
 import androidx.compose.ui.graphics.Color
 
-sealed class ColorPalette(
+sealed class ColorScheme(
     var colorPrimary: Color,
     var colorSecondary: Color,
     var colorBackground: Color,
 ) {
-   data object Light: ColorPalette(
+   data object Light: ColorScheme(
        colorPrimary = Purple,
        colorSecondary = White,
        colorBackground = White,
    )
 
-    data object Dark: ColorPalette(
+    data object Dark: ColorScheme(
         colorPrimary = Purple,
         colorSecondary = White,
         colorBackground = White,
