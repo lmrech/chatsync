@@ -1,4 +1,4 @@
-# ChatSync
+# ChatSync - Elevate your chats with Android mastery!
 
 ChatSync is not just an app; it's a testament to the prowess of Android development skills. Designed to showcase the depth of understanding in the Android environment, this cutting-edge application redefines the way you manage your digital conversations.
 
