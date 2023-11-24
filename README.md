@@ -14,7 +14,7 @@ ChatSync is not just an app; it's a testament to the prowess of Android developm
   
 - Privacy at its Core: We understand the importance of privacy. ChatSync prioritizes the security of your data, employing robust encryption measures to safeguard your cherished conversations.
 
-## Why ChatSync?
+### Why ChatSync?
 
 ChatSync goes beyond being just an app; it's a testament to the developer's profound grasp of Android technology. Elevate your digital experience with an application that not only showcases technical expertise but also enhances the way you manage and access your social conversations.
 
